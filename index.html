@@ -41,7 +41,7 @@
   .sync.err .d{background:var(--coral);}
   @keyframes bl{50%{opacity:.3}}
   .who{display:flex;gap:8px;flex-wrap:wrap;}
-  .who button{flex:1 1 calc(50% - 4px);border:1px solid var(--line);background:var(--panel);color:var(--sub);
+  .who button{flex:1;border:1px solid var(--line);background:var(--panel);color:var(--sub);
     padding:12px;border-radius:14px;font-size:15px;font-weight:700;cursor:pointer;transition:.18s;
     display:flex;align-items:center;justify-content:center;gap:7px;}
   .who button .dot{width:9px;height:9px;border-radius:50%;background:currentColor;opacity:.5;}
@@ -214,7 +214,7 @@
    設定：家族の合言葉（GAS側と同じ文字列にする）
    ========================================================= */
 const SHARED_KEY = "hyk-family-2026";   // ← GAS側の SHARED_KEY と一致させる
-const KIDS=[{id:'R',name:'REIA'},{id:'K',name:'KAKUMA'},{id:'M',name:'おとうさん'},{id:'S',name:'おかあさん'}];
+const KIDS=[{id:'R',name:'REIA'},{id:'K',name:'KAKUMA'}];
 
 /* GASのURL（端末ごとに1回だけ入力→localStorageに保存） */
 const GAS_KEY='kakeibo-gas-url';
