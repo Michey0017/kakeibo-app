@@ -234,9 +234,11 @@
 const SHARED_KEY = "hyk-family-2026";
 const KIDS=[{id:'R',name:'REIA'},{id:'K',name:'KAKUMA'}];
 
-/* GASのURL(端末ごとに1回だけ入力→localStorageに保存) */
+/* GASのURL(アプリに埋め込み済み。端末ごとの手入力は不要)
+   ※ もし将来GASを作り直してURLが変わったら、下のDEFAULT_GAS_URLを差し替えるだけでOK */
 const GAS_KEY='kakeibo-gas-url';
-let GAS_URL=localStorage.getItem(GAS_KEY)||'';
+const DEFAULT_GAS_URL='https://script.google.com/macros/s/AKfycbw17DURzkl4YnRsj2WUFjw3RP_EOZ9_0DiZFP5NY7srI5rJl6DlsUXMD3u3PtXA9fSr4Q/exec';
+let GAS_URL=localStorage.getItem(GAS_KEY)||DEFAULT_GAS_URL;
 
 /* ===== IndexedDB(レシート写真:この端末だけ) ===== */
 const DB='kakeibo-db',STORE='receipts';let db;
